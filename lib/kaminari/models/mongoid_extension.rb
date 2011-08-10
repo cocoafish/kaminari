@@ -7,7 +7,8 @@ module Kaminari
 
       included do
         def page(*args)
-          self.klass.page(*args).criteria.merge(self)
+          #self.klass.page(*args).criteria.merge(self)
+	  super(*args).criteria.merge(self)
         end
       end
     end
